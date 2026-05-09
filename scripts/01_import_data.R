@@ -3,7 +3,7 @@
 # Import pediatric HIV dataset
 # ----------------------------------------------------------
 
-# This script imports the original dataset, standardizes column names,
+# This public script imports the original dataset, standardizes column names,
 # performs a basic structural inspection, and saves an .rds version
 # for downstream scripts.
 #
@@ -64,13 +64,7 @@ print(colSums(is.na(data_raw)))
 # Targeted variable inspection
 # ----------------------------------------------------------
 
-# Selected categorical and clinical variable checks are intentionally
-# omitted from the public version.
-
-# Example of omitted checks:
-# - coded categorical variable distributions
-# - key exposure and outcome variable inspection
-# - consistency checks before downstream cleaning
+# --- targeted categorical and clinical variable checks omitted ---
 
 
 # ----------------------------------------------------------
