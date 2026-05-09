@@ -1,0 +1,60 @@
+# =========================
+# Personal / notes
+# =========================
+notes/
+notes.md
+*_NOTES.R
+
+# =========================
+# Full R implementation (private)
+# =========================
+*_FULL.R
+
+# =========================
+# Raw & private data
+# =========================
+data/raw/*
+!data/raw/.gitkeep
+
+data/metadata/*
+!data/metadata/.gitkeep
+
+data/processed/*
+!data/processed/.gitkeep
+
+# =========================
+# Reports / generated documents
+# =========================
+report/
+
+# =========================
+# Generated outputs
+# =========================
+outputs/*
+!outputs/.gitkeep
+
+tables/*
+!tables/.gitkeep
+
+figures/*
+!figures/.gitkeep
+
+# =========================
+# R session / project cache
+# =========================
+.RData
+.Rhistory
+.Rproj.user/
+.Ruserdata
+
+# =========================
+# IDE / Editor files
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
