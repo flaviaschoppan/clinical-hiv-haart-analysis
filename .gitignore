@@ -44,6 +44,7 @@ figures/*
 # =========================
 .RData
 .Rhistory
+**/.Rhistory
 .Rproj.user/
 .Ruserdata
 
