@@ -28,16 +28,30 @@ data/processed/*
 report/
 
 # =========================
-# Generated outputs
+# Generated local outputs
 # =========================
-outputs/*
-!outputs/.gitkeep
-
 tables/*
 !tables/.gitkeep
 
 figures/*
 !figures/.gitkeep
+
+# =========================
+# Selected public outputs
+# =========================
+outputs/*
+!outputs/.gitkeep
+
+!outputs/figures/
+outputs/figures/*
+!outputs/figures/.gitkeep
+!outputs/figures/*.png
+
+# =========================
+# Accidental RStudio plot exports
+# =========================
+Rplot*.png
+**/Rplot*.png
 
 # =========================
 # R session / project cache
