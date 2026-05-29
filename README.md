@@ -53,11 +53,11 @@ Some folders are kept in the project structure but their contents are intentiona
 
 Selected visualization outputs are provided in `outputs/figures/`. These are curated portfolio outputs copied from the local generated figures after review.
 
-### HAART use by final clinical-laboratory classification
+The first figure shows the proportional distribution of HAART exposure across final clinical-laboratory classifications.
 
 ![HAART use by final clinical-laboratory classification](outputs/figures/haart_cdcult_distribution.png)
 
-### Number of hospitalizations by HAART group
+The second figure summarizes the distribution of hospitalization counts by HAART group, combining boxplot summaries with individual-level observations.
 
 ![Number of hospitalizations by HAART group](outputs/figures/ninternou_haart_boxplot.png)
 
