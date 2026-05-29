@@ -65,12 +65,22 @@ if (length(missing_vars) > 0) {
 # Prepare visualization labels
 # ----------------------------------------------------------
 
+set.seed(123)
+
 plot_data <- data_clean %>%
   mutate(
     haart_plot = factor(
       haart,
       levels = c("No_HAART", "HAART"),
       labels = c("No HAART", "HAART")
+    ),
+    # Auxiliary plotting variable used only to reduce point overlap
+    # in the hospitalization count plot. Boxplot statistics use
+    # the original ninternou variable.
+    ninternou_plot = if_else(
+      ninternou == 0,
+      ninternou + runif(n(), min = 0.03, max = 0.38),
+      ninternou + runif(n(), min = -0.35, max = 0.35)
     )
   )
 
@@ -187,9 +197,15 @@ plot_ninternou_haart <- ggplot(
     color = "#222222",
     linewidth = 0.55
   ) +
-  geom_jitter(
-    aes(fill = haart_plot),
-    width = 0.15,
+  geom_point(
+    aes(
+      y = ninternou_plot,
+      fill = haart_plot
+    ),
+    position = position_jitter(
+      width = 0.18,
+      height = 0
+    ),
     alpha = 0.88,
     size = 2.4,
     shape = 21,
@@ -198,6 +214,10 @@ plot_ninternou_haart <- ggplot(
   ) +
   scale_fill_manual(
     values = haart_box_palette
+  ) +
+  scale_y_continuous(
+    limits = c(0, NA),
+    expand = expansion(mult = c(0.02, 0.06))
   ) +
   labs(
     title = "Number of Hospitalizations by HAART Group",
