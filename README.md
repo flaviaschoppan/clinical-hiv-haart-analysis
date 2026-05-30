@@ -61,9 +61,15 @@ The second figure summarizes the distribution of hospitalization counts by HAART
 
 ![Number of hospitalizations by HAART group](outputs/figures/ninternou_haart_boxplot.png)
 
+The third figure shows baseline CD4+ T lymphocyte count by HAART group. A zoomed y-axis view is used to improve readability while preserving boxplot statistics computed from the original values.
+
+![Baseline CD4+ T lymphocyte count by HAART group](outputs/figures/cd4in_haart_boxplot.png)
+
 ## Notes on visualization
 
 For hospitalization count plots, individual points are slightly jittered to reduce overplotting caused by repeated discrete count values. Boxplot summaries are computed from the original hospitalization count variable, while jittered point positions are used only for visual display.
+
+For the baseline CD4+ plot, a zoomed y-axis view is used for readability because the dataset contains high CD4 values that compress the central distribution under a full-scale display. Boxplot summaries are computed from the original values.
 
 ## Methods overview
 
